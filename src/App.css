@@ -547,6 +547,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     justify-content: center;
     color: #fff;
     padding-top: 10px;
+    transition: color 0.3s ease;
 }
 
 .proj-txtx a:hover {
