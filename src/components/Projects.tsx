@@ -1,23 +1,69 @@
-import { Col, Container, Row, Nav, Tab } from "react-bootstrap";
-import ProjectCard from "./ProjectCard";
-import projImg1 from "../assets/coming-soon.png";
+import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
+import ProjectCard from './ProjectCard';
+import projImg1 from '../assets/coming-soon.png';
+import gameHub from '../assets/Game-hub.png';
 
 const Projects = () => {
-  const projects = [
+  const projectsFirstSlide = [
     {
-      title: "Portfolio",
-      description: "This project is presented here to demonstrate my skills.",
-      imgUrl: projImg1,
+      title: 'Game Hub',
+      description: 'React + Ts + ChakraUI + Rawg API',
+      imgUrl: gameHub,
+      url: 'https://game-hub-phi-woad-14.vercel.app/',
     },
     {
-      title: "Portfolio",
-      description: "This project is presented here to demonstrate my skills.",
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
       imgUrl: projImg1,
+      url: '',
     },
     {
-      title: "Portfolio",
-      description: "This project is presented here to demonstrate my skills.",
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
       imgUrl: projImg1,
+      url: '',
+    },
+  ];
+
+  const projectsSecondSlide = [
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
+    },
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
+    },
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
+    },
+  ];
+
+  const projectsThirdSlide = [
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
+    },
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
+    },
+    {
+      title: 'Portfolio',
+      description: 'This project is presented here to demonstrate my skills.',
+      imgUrl: projImg1,
+      url: '',
     },
   ];
 
@@ -48,23 +94,23 @@ const Projects = () => {
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <Row>
-                      {projects.map((project, index) => {
+                      {projectsFirstSlide.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    {" "}
+                    {' '}
                     <Row>
-                      {projects.map((project, index) => {
+                      {projectsSecondSlide.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    {" "}
+                    {' '}
                     <Row>
-                      {projects.map((project, index) => {
+                      {projectsThirdSlide.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>

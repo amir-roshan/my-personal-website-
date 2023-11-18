@@ -542,6 +542,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     letter-spacing: 0.8px;
 }
 
+.proj-txtx a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.proj-txtx a:hover {
+    color: #f16b04;
+}
+
 .background-image-right {
     top: 20%;
     position: absolute;
@@ -551,9 +562,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     z-index: -4;
 }
 
+.projects-link {
+    display: inline-block
+}
+
 /************ Projects Css ************/
 .contact {
-    background-color: #333333;
+    background-color: #494949;
     padding: 30px 0 5 0px 0;
 }
 
