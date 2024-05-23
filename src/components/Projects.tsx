@@ -2,6 +2,7 @@ import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import projImg1 from '../assets/coming-soon.png';
 import gameHub from '../assets/Game-hub.png';
+import movieApp from '../assets/movie-app.png';
 
 const Projects = () => {
   const projectsFirstSlide = [
@@ -12,10 +13,10 @@ const Projects = () => {
       url: 'https://game-hub-phi-woad-14.vercel.app/',
     },
     {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
-      url: '',
+      title: 'Movie App',
+      description: 'React + TypeScript + Vite',
+      imgUrl: movieApp,
+      url: 'https://cosmic-semolina-3c982d.netlify.app/',
     },
     {
       title: 'Portfolio',
