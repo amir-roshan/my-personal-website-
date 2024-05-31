@@ -437,7 +437,7 @@ h5 {
 }
 
 .project .nav.nav-pills .nav-item {
-    width: 33.33333%;
+    width: 20%;
 }
 
 .nav-icon {
@@ -455,7 +455,7 @@ h5 {
 .project .nav.nav-pills .nav-link {
     background-color: transparent;
     border-radius: 0;
-    padding: 17px 0;
+    padding: 15px 0;
     color: #fff;
     width: 100%;
     font-size: 17px;

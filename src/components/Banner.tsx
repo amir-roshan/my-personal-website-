@@ -1,13 +1,13 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/Header-img.png";
-import { useEffect, useState } from "react";
+import { Col, Container, Row } from 'react-bootstrap';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
+import headerImg from '../assets/Header-img.png';
+import { useEffect, useState } from 'react';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Full-stack Developer", "Game Developer"];
-  const [text, setText] = useState("");
+  const toRotate = ['Full-stack Developer', 'Game Developer'];
+  const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
   const intervalSpeed = 2000;
@@ -37,7 +37,7 @@ export const Banner = () => {
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setDelta(intervalSpeed);
-    } else if (isDeleting && updatedText === "") {
+    } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setDelta(500);
@@ -45,9 +45,9 @@ export const Banner = () => {
   };
 
   const scrollToEmail = () => {
-    const emailSection = document.getElementById("email");
+    const emailSection = document.getElementById('email');
     if (emailSection) {
-      emailSection.scrollIntoView({ behavior: "smooth" });
+      emailSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

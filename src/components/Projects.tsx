@@ -1,8 +1,10 @@
 import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import projImg1 from '../assets/coming-soon.png';
-import gameHub from '../assets/Game-hub.png';
-import movieApp from '../assets/movie-app.png';
+
+import gameHub from '../assets/projects-img/Game-hub.png';
+import movieApp from '../assets/projects-img/movie-app.png';
+import sushiRestaurant from '../assets/projects-img/sushi.png';
 
 const Projects = () => {
   const projectsFirstSlide = [
@@ -19,35 +21,11 @@ const Projects = () => {
       url: 'https://cosmic-semolina-3c982d.netlify.app/',
     },
     {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
-      url: '',
+      title: 'Sushi Restaurant',
+      description: 'HTML, CSS and Vanilla JS',
+      imgUrl: sushiRestaurant,
+      url: 'https://deluxe-crisp-2bf289.netlify.app/',
     },
-  ];
-
-  const projectsSecondSlide = [
-    {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
-      url: '',
-    },
-    {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
-      url: '',
-    },
-    {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
-      url: '',
-    },
-  ];
-
-  const projectsThirdSlide = [
     {
       title: 'Portfolio',
       description: 'This project is presented here to demonstrate my skills.',
@@ -75,7 +53,8 @@ const Projects = () => {
           <Row>
             <Col>
               <h2>Projects</h2>
-              <p>These are the projects that I have worked on them.</p>
+              <p>Here are some of the projects I have worked on.</p>
+
               <Tab.Container id="projects-tabs" defaultActiveKey="first>">
                 <Nav
                   variant="pills"
@@ -83,35 +62,15 @@ const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Tab One</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second">Tab Two</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="third"> Tab Three</Nav.Link>
+                    <Nav.Link eventKey="first">
+                      Tap Here to see the projects.
+                    </Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <Row>
                       {projectsFirstSlide.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">
-                    {' '}
-                    <Row>
-                      {projectsSecondSlide.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="third">
-                    {' '}
-                    <Row>
-                      {projectsThirdSlide.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
