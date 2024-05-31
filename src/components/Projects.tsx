@@ -37,22 +37,22 @@ const Projects = () => {
       url: 'https://guileless-puppy-d4672a.netlify.app/',
     },
     {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
+      title: 'VR Website',
+      description: 'React + JavaScript + Tailwind CSS',
       imgUrl: vr,
-      url: '',
+      url: 'https://melodic-narwhal-eb1f9d.netlify.app/',
     },
     {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
+      title: 'Hoo Bank',
+      description: 'React + JavaScript + CSS',
       imgUrl: hooBank,
-      url: '',
+      url: 'https://papaya-dodol-152431.netlify.app/',
     },
     {
-      title: 'Portfolio',
-      description: 'This project is presented here to demonstrate my skills.',
+      title: 'Fitness Tracker',
+      description: 'RapidAPI + React + JavaScript + CSS',
       imgUrl: fitness,
-      url: '',
+      url: 'https://precious-youtiao-380a70.netlify.app/',
     },
   ];
 
