@@ -396,12 +396,36 @@ h5 {
     font-weight: 700;
 }
 
-.skill-icon {
+.skill-icon,
+.skill-react-icon {
     margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.skill-react-icon {
+    fill: #fba;
+}
+
+.skill-icon:hover {
+    color: #f16b04;
+}
+
+.skill-react-icon:hover {
+    fill: #f16b04;
 }
 
 .skill-heading {
     margin-bottom: 40px;
+}
+
+a {
+    color: #fff;
+}
+
+.icon-link:hover .skill-icon,
+.icon-link:hover .skill-react-icon {
+    color: #f16b04;
+    /* Change color on hover */
 }
 
 /************ Projects Css ************/
