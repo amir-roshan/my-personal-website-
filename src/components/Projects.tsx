@@ -1,10 +1,14 @@
 import { Col, Container, Row, Nav, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
-import projImg1 from '../assets/coming-soon.png';
+// import projImg1 from '../assets/coming-soon.png';
 
 import gameHub from '../assets/projects-img/Game-hub.png';
 import movieApp from '../assets/projects-img/movie-app.png';
 import sushiRestaurant from '../assets/projects-img/sushi.png';
+import nike from '../assets/projects-img/nike.png';
+import vr from '../assets/projects-img/vr.png';
+import hooBank from '../assets/projects-img/hoo-bank.png';
+import fitness from '../assets/projects-img/fitness.png';
 
 const Projects = () => {
   const projectsFirstSlide = [
@@ -27,21 +31,27 @@ const Projects = () => {
       url: 'https://deluxe-crisp-2bf289.netlify.app/',
     },
     {
+      title: 'Nike',
+      description: 'Nike Website with Tailwind CSS and React',
+      imgUrl: nike,
+      url: 'https://guileless-puppy-d4672a.netlify.app/',
+    },
+    {
       title: 'Portfolio',
       description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
+      imgUrl: vr,
       url: '',
     },
     {
       title: 'Portfolio',
       description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
+      imgUrl: hooBank,
       url: '',
     },
     {
       title: 'Portfolio',
       description: 'This project is presented here to demonstrate my skills.',
-      imgUrl: projImg1,
+      imgUrl: fitness,
       url: '',
     },
   ];
