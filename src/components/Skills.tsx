@@ -77,8 +77,7 @@ const Skills = () => {
         <Row>
           <Col>
             <div className="skill-box">
-              <h2>Skills</h2>
-              <p>Your skills and expertise</p>
+              <h2 className="skill-heading">Skills</h2>
               <Carousel
                 responsive={responsive}
                 infinite={true}
