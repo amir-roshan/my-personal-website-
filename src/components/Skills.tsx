@@ -1,92 +1,105 @@
-import { Col, Container, Row } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { Col, Container, Row } from 'react-bootstrap';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import {
+  faReact,
+  faJava,
+  faJs,
+  faNodeJs,
+  faDocker,
+  faCss3,
+  faHtml5,
+  faGit,
+  faUnity,
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { ReactSVG } from 'react-svg';
+import reduxIcon from '../assets/redux.svg';
+import typeScript from '../assets/typescript.svg';
+
+interface Skill {
+  skill: string;
+  icon: IconDefinition | null;
+  customIcon?: JSX.Element;
+}
+
 const Skills = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 7,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 5,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
+
+  const skills: Skill[] = [
+    {
+      skill: 'Redux',
+      icon: null,
+      customIcon: <ReactSVG src={reduxIcon} className="skill-icon" />,
+    },
+    { skill: 'React', icon: faReact },
+    { skill: 'Java', icon: faJava },
+    { skill: 'JavaScript', icon: faJs },
+    { skill: 'SQL', icon: faDatabase },
+    { skill: 'Node.js', icon: faNodeJs },
+    {
+      skill: 'TypeScript',
+      icon: null,
+      customIcon: <ReactSVG src={typeScript} className="skill-icon" />,
+    },
+    { skill: 'C#', icon: null },
+    { skill: 'Unity', icon: faUnity },
+    { skill: 'HTML', icon: faHtml5 },
+    { skill: 'CSS', icon: faCss3 },
+    { skill: 'MongoDB', icon: faDatabase },
+    { skill: 'Express', icon: faServer },
+    { skill: 'Docker', icon: faDocker },
+    { skill: '', icon: faGit },
+  ];
+
   return (
     <section className="skill" id="skills">
       <Container>
         <Row>
           <Col>
             <div className="skill-box">
-              <h2>
-                Skills
-                <p></p>
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  className="skill-slider"
-                >
-                  <div className="item">
-                    <h5>React</h5>
+              <h2>Skills</h2>
+              <p>Your skills and expertise</p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className="skill-slider"
+              >
+                {skills.map((skill, index) => (
+                  <div className="item" key={index}>
+                    <h5>
+                      {skill.skill}
+                      {skill.icon && (
+                        <FontAwesomeIcon
+                          className="skill-icon"
+                          icon={skill.icon}
+                          size="lg"
+                        />
+                      )}
+                      {skill.customIcon}
+                    </h5>
                   </div>
-
-                  <div className="item">
-                    <h5>Redux</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>JavaScript</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>SQL</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>Node.js</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>TypeScript</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>C#</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>Unity</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>HTML & CSS</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>MongoDB</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>Express</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>Docker</h5>
-                  </div>
-
-                  <div className="item">
-                    <h5>Git</h5>
-                  </div>
-                </Carousel>
-              </h2>
+                ))}
+              </Carousel>
             </div>
           </Col>
         </Row>
